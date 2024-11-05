@@ -204,8 +204,22 @@ logger = logging.getLogger(__name__)
 
 OPTIONS = common.OPTIONS
 
-OPTIONS.extra_apks = {}
-OPTIONS.extra_apex_payload_keys = {}
+OPTIONS.extra_apks = {
+  'com.android.appsearch.apk.apex': '/lineage/signing/signing-keys/com.android.appsearch.apk',
+  'com.android.hardware.authsecret.apex': '/lineage/signing/signing-keys/com.android.hardware.authsecret',
+  'com.android.hardware.neuralnetworks.apex': '/lineage/signing/signing-keys/com.android.hardware.neuralnetworks',
+  'com.android.hardware.rebootescrow.apex': '/lineage/signing/signing-keys/com.android.hardware.rebootescrow',
+  'com.android.nfcservices.apex': '/lineage/signing/signing-keys/com.android.nfcservices',
+  'com.android.profiling.apex': '/lineage/signing/signing-keys/com.android.profiling',
+}
+OPTIONS.extra_apex_payload_keys = {
+  'com.android.appsearch.apk.apex': '/lineage/signing/signing-keys/com.android.appsearch.apk.pem',
+  'com.android.hardware.authsecret.apex': '/lineage/signing/signing-keys/com.android.hardware.authsecret.pem',
+  'com.android.hardware.neuralnetworks.apex': '/lineage/signing/signing-keys/com.android.hardware.neuralnetworks.pem',
+  'com.android.hardware.rebootescrow.apex': '/lineage/signing/signing-keys/com.android.hardware.rebootescrow.pem',
+  'com.android.nfcservices.apex': '/lineage/signing/signing-keys/com.android.nfcservices.pem',
+  'com.android.profiling.apex': '/lineage/signing/signing-keys/com.android.profiling.pem',
+}
 OPTIONS.skip_apks_with_path_prefix = set()
 OPTIONS.key_map = {}
 OPTIONS.rebuild_recovery = False
